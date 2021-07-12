@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
-const {InjectManifest} = require('workbox-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -20,6 +19,14 @@ module.exports = {
           },
           {
             loader: 'css-loader'
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader'
           }
         ]
       }
@@ -40,9 +47,6 @@ module.exports = {
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js')
-    }),
-    new InjectManifest({
-      swSrc: './src/sw.js'
     })
   ]
 }

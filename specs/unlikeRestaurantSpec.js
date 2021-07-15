@@ -15,21 +15,21 @@ describe('Unliking a restaurant', () => {
     await FavoriteRestoIdb.deleteResto(1)
   })
 
-  it('should display unlike widget when the movie has been liked', async () => {
+  it('should display unlike widget when the resto has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 })
 
     expect(document.querySelector('[aria-label="unlike this resto"]'))
       .toBeTruthy()
   })
 
-  it('should not display like widget when the movie has been liked', async () => {
+  it('should not display like widget when the resto has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 })
 
     expect(document.querySelector('[aria-label="like this resto"]'))
       .toBeFalsy()
   })
 
-  it('should be able to remove liked movie from the list', async () => {
+  it('should be able to remove liked resto from the list', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 })
 
     document.querySelector('[aria-label="unlike this resto"]').dispatchEvent(new Event('click'))

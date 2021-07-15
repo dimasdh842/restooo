@@ -1,6 +1,6 @@
 import CONFIG from '../../globals/config'
 
-const createMovieDetailTemplate = (restaurant) => {
+const createRestoDetailTemplate = (restaurant) => {
   let template = `
     <h2 class="movie__title">${restaurant.name}</h2>
     <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
@@ -54,19 +54,19 @@ const createRestoItemTemplate = (resto) => `
   </div>
 `
 
-const createLikeButtonTemplate = () => `
-    <button aria-label="like this movie" id="likeButton" class="like">
+const createLikeRestoButtonTemplate = () => `
+    <button aria-label="like this resto" id="likeButton" class="like">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>`
 
-const createLikedButtonTemplate = () => `
-    <button aria-label="unlike this movie" id="likeButton" class="like">
+const createUnlikeRestoButtonTemplate = () => `
+    <button aria-label="unlike this resto" id="likeButton" class="like">
         <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
 `
 export {
-  createMovieDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createRestoDetailTemplate,
+  createLikeRestoButtonTemplate,
+  createUnlikeRestoButtonTemplate,
   createRestoItemTemplate
 }

@@ -55,6 +55,6 @@ Scenario('unliking one restaurant', async ({ I }) => {
 
   I.amOnPage('#/like');
   I.seeElement('#movies');
-  // I.dontSeeElement('.movies');
-  // I.dontSeeElement('.movie__title');
+  I.dontSeeElement('.movies');
+  I.dontSeeElement('.movie__title');
 });

@@ -1,6 +1,7 @@
 var serviceWorkerOption = {
   "assets": [
-    "/3366ce8a145bb4735fbbbf6e7a9ecf88.jpg",
+    "/c23f936226180471fd5a6d80db6d4054.jpg",
+    "/bd6b63650298f334a08b66446d66c536.jpg",
     "/bundle.js",
     "/apple-icon.png",
     "/favicon.png",
@@ -10,7 +11,8 @@ var serviceWorkerOption = {
     "/icon-512x512.png",
     "/logo.png",
     "/manifest.json",
-    "/assets/hero-1.jpg",
+    "/hero/hero-image-large.jpg",
+    "/hero/hero-image-small.jpg",
     "/index.html"
   ]
 };

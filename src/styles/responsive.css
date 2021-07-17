@@ -1,4 +1,19 @@
 @media screen and (min-width: 650px) {
+.jumbotron-container{
+    background: url('../public/hero/hero-image-large.jpg');
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -100px;
+    z-index: 1;
+    color: white;
+    }
+    
   .app-bar {
       grid-template-columns: 1fr auto;
       padding: 8px 32px;
@@ -13,20 +28,20 @@
   }
  
   .app-bar .app-bar__navigation {
-      position: static;
-      width: 100%;
-      background-color: initial;
-      top: 50px;
-      z-index: initial;
+    position: static;
+    width: 100%;
+    background-color: initial;
+    top: 50px;
+    z-index: initial;
   }
  
   .app-bar .app-bar__navigation ul {
-  padding:initial;
-  list-style: none;
+    padding:initial;
+    list-style: none;
 }
  
   .app-bar .app-bar__navigation ul li {
-      display: inline-block;
+    display: inline-block;
   }
  
   .app-bar .app-bar__navigation ul li a {
@@ -75,6 +90,10 @@
   .app-bar .app-bar__brand h1 {
       font-size: 2em;
   }
+
+
+  
+  
 }
  
 @media screen and (min-width: 850px) {

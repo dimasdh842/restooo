@@ -41,7 +41,7 @@ const createRestoDetailTemplate = (restaurant) => {
 const createRestoItemTemplate = (resto) => `
      <div class="movie-item">
     <div class="movie-item__header">
-        <img class="movie-item__header__poster" alt="${resto.name}"
+        <img loading="lazy" width="100" height="200" class="movie-item__header__poster" alt="${resto.name}"
             src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}">
         <div class="movie-item__header__rating">
             <p>⭐️<span class="movie-item__header__rating__score">${resto.rating}</span></p>

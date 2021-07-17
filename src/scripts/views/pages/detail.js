@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser'
 import RestoDbSource from '../../data/resto-source'
-import { createMovieDetailTemplate } from '../templates/template-creator'
+import { createRestoDetailTemplate } from '../templates/template-creator'
 import LikeButtonInitiator from '../../utils/like-button-initiator'
 
 const Detail = {
@@ -14,7 +14,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner()
     const { restaurant } = await RestoDbSource.detailResto(url.id)
     const restoContainer = document.querySelector('#movie')
-    restoContainer.innerHTML = createMovieDetailTemplate(restaurant)
+    restoContainer.innerHTML = createRestoDetailTemplate(restaurant)
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {

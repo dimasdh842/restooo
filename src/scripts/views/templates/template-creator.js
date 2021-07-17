@@ -48,8 +48,8 @@ const createRestoItemTemplate = (resto) => `
         </div>
     </div>
     <div class="movie-item__content">
-        <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
-        <p>${resto.description}</p>
+        <h3 class="movie__title"><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
+        <p>${resto.description}</p> 
     </div>
   </div>
 `

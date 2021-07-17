@@ -13,11 +13,17 @@ const Like = {
     `
   },
   async afterRender () {
-    const movies = await FavoriteRestoIdb.getAllResto()
-    const moviesContainer = document.querySelector('#movies')
-    console.log(movies)
-    movies.forEach((movie) => {
-      moviesContainer.innerHTML += createRestoItemTemplate(movie)
+    const resto = await FavoriteRestoIdb.getAllResto()
+    const restoContainer = document.querySelector('#movies')
+    
+    if (resto.length === 0) {
+      restoContainer.innerHTML = `
+        Tidak ada Resto yang disukai
+      `;
+    }
+
+    resto.forEach((resto) => {
+      restoContainer.innerHTML += createRestoItemTemplate(resto)
     })
   }
 }

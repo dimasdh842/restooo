@@ -32,29 +32,3 @@ I.see(emptyFavoriteRestoText, '#movies');
   const assert = require('assert');
   assert.strictEqual(firstRestoTitle, likedRestoTitle);
 });
-
-Scenario('unliking one restaurant', async ({ I }) => {
-  I.amOnPage('/');
- 
-  I.seeElement('.movie__title a');
- 
-  const firstResto = locate('.movie__title a').first();
-  I.click(firstResto);
- 
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
-  
-  I.amOnPage('#/like');
-  I.seeElement('.movies');
-  
-  firstRestoTitle = await I.grabTextFrom('.movie__title a');
-  I.click(firstRestoTitle);
-
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
-
-  I.amOnPage('#/like');
-  I.seeElement('#movies');
-  I.dontSeeElement('.movies');
-  I.dontSeeElement('.movie__title');
-});

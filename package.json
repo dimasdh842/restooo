@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "lint": "eslint ./src/scripts",
+    "lint": "eslint ./src --fix",
     "e2e": "codeceptjs run --steps"
   },
   "keywords": [],

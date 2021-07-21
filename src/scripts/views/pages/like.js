@@ -15,11 +15,11 @@ const Like = {
   async afterRender () {
     const resto = await FavoriteRestoIdb.getAllResto()
     const restoContainer = document.querySelector('#movies')
-    
+
     if (resto.length === 0) {
       restoContainer.innerHTML = `
         Tidak ada Resto yang disukai
-      `;
+      `
     }
 
     resto.forEach((resto) => {
